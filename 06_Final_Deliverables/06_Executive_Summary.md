@@ -33,7 +33,7 @@ We re-executed the same behavior and watched the alerts fire automatically withi
 
 Both rules are ready for production deployment after an additional tuning phase (building an allowlist of legitimate tools and processes). It is recommended to expand coverage to additional techniques under Credential Access and Lateral Movement in a follow-up cycle.
 
-> ⚠️ This report covers a Controlled Simulation within a training lab, not an actual security incident that occurred at a client.
+> This report covers a Controlled Simulation within a training lab, not an actual security incident that occurred at a client.
 
 ---
 **Resilient Cybersecurity** | Detect • Defend • Respond
