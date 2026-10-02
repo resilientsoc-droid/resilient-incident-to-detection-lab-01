@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎯 Incident-to-Detection Lab 01
+# Incident-to-Detection Lab 01
 
 **From attack simulation to validated detection: DFIR timeline, Sigma + SPL rules and alert replay in Splunk**
 
@@ -14,11 +14,11 @@
 
 ---
 
-> ⚠️ **Controlled simulation.** Everything here was executed in an isolated VMware lab owned by the analyst, using Atomic Red Team. This is **not** a real security incident and no real victim data is involved.
+> **Controlled simulation.** Everything here was executed in an isolated VMware lab owned by the analyst, using Atomic Red Team. This is **not** a real security incident and no real victim data is involved.
 
-> 🔒 **Privacy.** Host-identifying values (Windows Product ID, DHCP server, IP addresses and the machine SID) are redacted in the screenshots and replaced with `192.168.x.x` in the reports. The VM hostname `DESKTOP-DI2GMCC` is a throwaway lab name and is left as is.
+> **Privacy.** Host-identifying values (Windows Product ID, DHCP server, IP addresses and the machine SID) are redacted in the screenshots and replaced with `192.168.x.x` in the reports. The VM hostname `DESKTOP-DI2GMCC` is a throwaway lab name and is left as is.
 
-## 📌 Overview
+## Overview
 
 The lab starts from a common blue-team gap: the environment **recorded** everything (Sysmon and Windows logs in Splunk) but had **no detection** for the behaviors being tested.
 
@@ -31,7 +31,7 @@ The project closes that gap in four phases:
 | 3. Detect | Built behavior-based rules in SPL and Sigma, tested for false positives | DET-001, DET-002 |
 | 4. Validate | Replayed the same techniques and confirmed the alerts fired | Validation report |
 
-## 🎯 Key Results
+## Key Results
 
 | Metric | Value |
 |---|---|
@@ -41,7 +41,7 @@ The project closes that gap in four phases:
 | T1082 | Observed, deliberately **no rule** (too noisy on its own, see Detection Package) |
 | Evidence | 32 screenshots across 4 phases + 6 reports |
 
-## 🖥️ Lab Environment
+## Lab Environment
 
 | Component | Details |
 |---|---|
@@ -53,7 +53,7 @@ The project closes that gap in four phases:
 | Simulation | Atomic Red Team (`Invoke-AtomicTest`) |
 | Safety | VM snapshot `Clean_Baseline_Before_Scenario1_2026-09-26` used as rollback point |
 
-## 🛡️ MITRE ATT&CK Coverage
+## MITRE ATT&CK Coverage
 
 | Tactic | Technique | Atomic test | Observed | Rule | Validated |
 |---|---|---|---|---|---|
@@ -63,7 +63,7 @@ The project closes that gap in four phases:
 
 ---
 
-# 🧪 Evidence Walkthrough
+# Evidence Walkthrough
 
 ## Phase 0: Telemetry and tooling setup
 
@@ -299,7 +299,7 @@ Replay executed at **01:43:55** (new `TestGuid` and a new Base64 payload):
 └── 06_Final_Deliverables/          # MITRE coverage map + executive summary
 ```
 
-## 📚 Documents
+## Documents
 
 | Document | Link |
 |---|---|
@@ -310,7 +310,7 @@ Replay executed at **01:43:55** (new `TestGuid` and a new Base64 payload):
 | Chain of Custody | [`05_Chain_of_Custody.md`](05_Chain_of_Custody/05_Chain_of_Custody.md) |
 | Executive Summary | [`06_Executive_Summary.md`](06_Final_Deliverables/06_Executive_Summary.md) |
 
-## 🧰 Skills Demonstrated
+## kills Demonstrated
 
 `Splunk SPL` · `Sigma rules` · `Sysmon` · `Windows Event Logs (4698, 4103/4104)` · `Atomic Red Team` · `MITRE ATT&CK` · `DFIR timeline reconstruction` · `Detection tuning` · `Purple-team validation`
 
