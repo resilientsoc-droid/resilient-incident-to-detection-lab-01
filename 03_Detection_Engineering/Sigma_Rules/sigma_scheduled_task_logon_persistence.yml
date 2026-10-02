@@ -1,0 +1,29 @@
+title: Scheduled Task Created with Logon Trigger and Highest Privileges
+id: 8b2d47e1-5c9a-4f36-b0d8-1a7e63c9f254
+status: experimental
+description: >
+    Detects creation of a scheduled task (Security Event 4698) that runs at
+    user logon with the highest available privileges, a common persistence
+    pattern. Built from a controlled Atomic Red Team replay of T1053.005
+    (Test 4) in an isolated lab.
+date: 2026/09/28
+references:
+    - https://attack.mitre.org/techniques/T1053/005/
+tags:
+    - attack.persistence
+    - attack.privilege_escalation
+    - attack.t1053.005
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4698
+    selection_trigger:
+        TaskContent|contains: '<LogonTrigger>'
+    selection_priv:
+        TaskContent|contains: '<RunLevel>HighestAvailable</RunLevel>'
+    condition: selection and selection_trigger and selection_priv
+falsepositives:
+    - Legitimate software installers and updaters that register logon tasks with elevated rights
+level: medium

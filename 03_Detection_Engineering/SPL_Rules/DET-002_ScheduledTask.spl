@@ -1,0 +1,4 @@
+index=wineventlog EventCode=4698
+| regex TaskContent="(?i)<LogonTrigger>"
+| regex TaskContent="(?i)<RunLevel>HighestAvailable</RunLevel>"
+| table _time, host, Subject_Account_Name, Task_Name, TaskContent

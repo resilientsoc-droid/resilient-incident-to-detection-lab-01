@@ -1,0 +1,4 @@
+index=sysmon EventCode=1 (Image="*\\powershell.exe" OR Image="*\\pwsh.exe")
+| regex CommandLine="(?i)\s[-/–—]e[a-z]*\s+[A-Za-z0-9+/=]{20,}"
+| eval RealUser=mvfilter(User!="NOT_TRANSLATED")
+| table _time, host, RealUser, ParentImage, CommandLine

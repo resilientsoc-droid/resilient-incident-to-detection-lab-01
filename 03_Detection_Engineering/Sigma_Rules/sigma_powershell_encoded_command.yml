@@ -1,0 +1,28 @@
+title: PowerShell Encoded Command Execution
+id: 3f1a9c52-7d64-4b8e-a1c3-5e2b90d47a16
+status: experimental
+description: >
+    Detects powershell.exe or pwsh.exe launched with an encoded command
+    switch (-e, -enc, -EncodedCommand and any abbreviation) followed by a
+    Base64-like payload. Built from a controlled Atomic Red Team replay
+    of T1059.001 (Test 15) in an isolated lab.
+date: 2026/09/28
+references:
+    - https://attack.mitre.org/techniques/T1059/001/
+tags:
+    - attack.execution
+    - attack.t1059.001
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_img:
+        Image|endswith:
+            - '\powershell.exe'
+            - '\pwsh.exe'
+    selection_cli:
+        CommandLine|re: '(?i)\s[-/–—]e[a-z]*\s+[A-Za-z0-9+/=]{20,}'
+    condition: selection_img and selection_cli
+falsepositives:
+    - Legitimate management tools (SCCM, Intune, monitoring agents) that pass encoded commands
+level: medium
