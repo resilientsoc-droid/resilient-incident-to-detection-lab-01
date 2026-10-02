@@ -27,7 +27,7 @@ Data is stored within:
 
 ## Destruction
 
-**⚠️ Open item:** A final destruction date has not yet been defined, as this is a training/sample engagement rather than an actual third-party contract. In any real engagement, this item must be explicitly defined in the scoping document (e.g., destruction within 30 days of final delivery, with written notice).
+**Open item:** A final destruction date has not yet been defined, as this is a training/sample engagement rather than an actual third-party contract. In any real engagement, this item must be explicitly defined in the scoping document (e.g., destruction within 30 days of final delivery, with written notice).
 
 ## Confidentiality
 
