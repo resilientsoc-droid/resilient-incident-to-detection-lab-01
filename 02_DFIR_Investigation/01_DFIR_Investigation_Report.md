@@ -70,7 +70,7 @@ Decoding the Base64 payload in the second command reveals benign content (a `Wri
 |---|---|
 | `DESKTOP-DI2GMCC\SOC` | The account used to execute all three stages. Runs at `IntegrityLevel: High`. Account privileges were not analyzed at an Active Directory level, as the host is in a `WORKGROUP`, not a Domain. |
 
-**⚠️ Out of Scope:** There is no Active Directory environment in this lab, so privilege relationships between accounts (Privilege Escalation Paths) or other accounts were not analyzed. This item requires a real AD environment to be fully executed.
+**Out of Scope:** There is no Active Directory environment in this lab, so privilege relationships between accounts (Privilege Escalation Paths) or other accounts were not analyzed. This item requires a real AD environment to be fully executed.
 
 ## 8. IPs / Domains / Hashes
 
