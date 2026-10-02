@@ -7,7 +7,7 @@
 **Classification:** Public — Training Lab (Controlled Simulation)
 **Document version:** v1.0
 
-> ⚠️ **Mandatory Notice:** This report documents a **Controlled Simulation** executed inside an isolated lab, with full knowledge and ownership by the analyst. **This is NOT a real security incident.** No part of this document is presented as an investigation of an actual breach.
+> **Mandatory Notice:** This report documents a **Controlled Simulation** executed inside an isolated lab, with full knowledge and ownership by the analyst. **This is NOT a real security incident.** No part of this document is presented as an investigation of an actual breach.
 
 ---
 
