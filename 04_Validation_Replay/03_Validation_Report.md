@@ -5,7 +5,7 @@
 **Date:** 2026-09-29
 **Classification:** Public — Training Lab (Controlled Simulation)
 
-> ⚠️ This report documents a Controlled Simulation within an isolated lab, not a test performed on a real production environment.
+> This report documents a Controlled Simulation within an isolated lab, not a test performed on a real production environment.
 
 ---
 
